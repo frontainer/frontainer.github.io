@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Ripple JS</title>
+	<meta name="description" content="クリック時に波紋のようなエフェクトをつけるjQueryプラグイン「Ripple JS」" />
+	<meta name="keywords" content="ripple,波紋,jQuery,jQueryプラグイン,エフェクト" />
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body id="top">
+	<div id="container">
+		<h1>Ripple JS</h1>
+		<p>Let's Click!!</p>
+		<div id="controller">
+			<div>
+				エフェクトサンプル
+				<select id="sample" name="sample">
+					<option value="default">デフォルト</option>
+					<option value="rect">四角形</option>
+					<option value="blur">ぼかし</option>
+				</select>
+				　エフェクト数
+				<select id="count" name="count">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3">3</option>
+				</select>
+				　イージング
+				<select id="easing" name="easing">
+					<option value="linear">linear</option>
+					<option value="swing">swing</option>
+					<option value="jswing">jswing</option>
+					
+					<option value="easeInQuad">easeInQuad</option>
+					<option value="easeOutQuad">easeOutQuad</option>
+					<option value="easeInOutQuad">easeInOutQuad</option>
+					
+					<option value="easeInCubic">easeInCubic</option>
+					<option value="easeOutCubic">easeOutCubic</option>
+					<option value="easeInOutCubic">easeInOutCubic</option>
+					
+					<option value="easeInQuart">easeInQuart</option>
+					<option value="easeOutQuart">easeOutQuart</option>
+					<option value="easeInOutQuart">easeInOutQuart</option>
+					
+					<option value="easeInCubic">easeInQuint</option>
+					<option value="easeOutQuint">easeOutQuint</option>
+					<option value="easeInOutQuint">easeInOutQuint</option>
+					
+					<option value="easeInSine">easeInSine</option>
+					<option value="easeInCubic">easeOutSine</option>
+					<option value="easeInOutSine">easeInOutSine</option>
+					
+					<option value="easeInExpo">easeInExpo</option>
+					<option value="easeOutExpo">easeOutExpo</option>
+					<option value="easeInOutExpo">easeInOutExpo</option>
+					
+					<option value="easeInElastic">easeInElastic</option>
+					<option value="easeOutElastic">easeOutElastic</option>
+					<option value="easeInOutElastic">easeInOutElastic</option>
+					
+					<option value="easeInBack">easeInBack</option>
+					<option value="easeOutBack">easeOutBack</option>
+					<option value="easeInOutBack">easeInOutBack</option>
+					
+					<option value="easeInBounce">easeInBounce</option>
+					<option value="easeOutBounce">easeOutBounce</option>
+					<option value="easeInOutBounce">easeInOutBounce</option>
+				</select>
+			</div>
+			<div>
+				サイズ
+				<select id="size" name="size">
+					<option value="60">60</option>
+					<option value="120" selected="selected">120</option>
+					<option value="200">200</option>
+					<option value="500">500</option>
+				</select>
+				　イベントタイプ
+				<select id="event" name="event">
+					<option value="click">クリック</option>
+					<option value="mousemove">マウスムーブ</option>
+				</select>
+				　背景色
+				<select id="bgcolor" name="bgcolor">
+					<option value="white">白</option>
+					<option value="black">黒</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+	<script src="js/jquery.ripple.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
