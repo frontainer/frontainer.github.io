@@ -1,8 +1,7 @@
-.idea/.name
-.idea/encodings.xml
-.idea/frontainer.github.io.iml
-.idea/misc.xml
-.idea/modules.xml
-.idea/scopes/scope_settings.xml
-.idea/vcs.xml
-.idea/workspace.xml
+.idea
+.sass-cache
+.DS_Store
+node_modules
+bower_components
+app/public
+app/guide
