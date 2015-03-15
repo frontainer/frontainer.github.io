@@ -8,30 +8,21 @@ module.exports = {
     },
     devtool: '#source-map',
     resolve: {
-        modulesDirectories: ["node_modules"],
+        modulesDirectories: ["bower_components","node_modules"],
+        alias: {
+            bower: 'bower_components'
+        }
     },
     module: {
-        jshint: {
-            //Options to jshint-loader https://github.com/webpack/jshint-loader
-        },
-        jsx: {
-            //Options to jsx-loader https://github.com/petehunt/jsx-loader
-        },
-        preLoaders: [
-            {
-                test: /\.js$/,
-                exclude: /node_modules/,
-                loader: 'jsxhint-loader'
-            }
-        ],
         loaders: [
-            { test: /\.js$/, exclude: /node_modules/, loader: 'jsx-loader'},
-            { test: /\.async\.js$/, exclude: /node_modules/, loaders: ['react-proxy','jsx-loader'] }
+            { test: /\.html$/, loader: 'html-loader' }
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin('common','common.js'),
-        new webpack.optimize.DedupePlugin()
-        //new webpack.optimize.AggressiveMergingPlugin()
+        //new webpack.optimize.CommonsChunkPlugin('common','common.js'),
+        new webpack.ResolverPlugin(
+            new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin("bower.json", ["main"])
+        ),
+        new webpack.optimize.AggressiveMergingPlugin()
     ]
 };

@@ -3,12 +3,7 @@
   "version": "0.3.1",
   "description": "個人的に利用しているWeb制作テンプレート",
   "main": "gulpfile.js",
-  "dependencies": {
-    "flux": "^2.0.1",
-    "react": "^0.12.2",
-    "react-router": "^0.12.4",
-    "react-tools": "^0.12.2"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^1.3.7",
     "connect-modrewrite": "^0.7.9",
@@ -24,6 +19,7 @@
     "gulp-htmlhint": "0.0.9",
     "gulp-if": "^1.2.4",
     "gulp-imagemin": "^2.0.0",
+    "gulp-karma": "0.0.4",
     "gulp-load-plugins": "^0.6.0",
     "gulp-notify": "^1.6.0",
     "gulp-plumber": "^0.6.5",
@@ -33,33 +29,19 @@
     "gulp-util": "^3.0.1",
     "gulp-webpack": "^0.4.1",
     "gulp.spritesmith": "^1.3.0",
+    "html-loader": "^0.2.3",
     "jasmine-core": "^2.1.3",
-    "jest-cli": "^0.4.0",
-    "jsx-loader": "^0.12.2",
-    "react-proxy-loader": "^0.3.3",
+    "jshint": "^2.5.11",
+    "jshint-loader": "^0.8.0",
+    "karma": "^0.12.28",
+    "karma-jasmine": "^0.3.2",
+    "karma-phantomjs-launcher": "^0.1.4",
     "run-sequence": "^1.0.2",
     "through2": "^0.6.1",
     "webpack": "^1.4.4"
   },
-  "jest": {
-    "scriptPreprocessor": "<rootDir>/preprocessor.js",
-    "unmockedModulePathPatterns": [
-      "<rootDir>/node_modules/react"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "jsx"
-    ],
-    "testFileExtensions": [
-      "js"
-    ],
-    "testPathDirs": [
-      "<rootDir>/app/source/pc/js/"
-    ]
-  },
   "scripts": {
-    "test": "jest"
+    "test": "gulp test"
   },
   "author": "frontainer",
   "license": "MIT"

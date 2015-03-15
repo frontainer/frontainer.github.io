@@ -1,0 +1,35 @@
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: $sidebar-width;
+	padding-right: 24px;
+	box-sizing: border-box;
+	@extend .clearfix;
+	h1 {
+		position: absolute;
+		margin: 10px 0;
+		font-family: $accent-font;
+		font-size: ms(1);
+		line-height: 1.2;
+		padding: 0px 24px;
+	}
+	.sns {
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		left: 24px;
+		bottom: 24px;
+		list-style: none;
+		font-size: 18px;
+		li {
+			display: inline-block;
+			a {
+				display: block;
+				padding: 8px;
+				color: #000;
+			}
+		}
+	}
+}

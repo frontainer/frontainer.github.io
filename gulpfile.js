@@ -76,7 +76,7 @@ gulp.task('watch', function() {
     gulp.watch(getPath('ejs','watch'), ['ejs']);
     gulp.watch(getPath('html'), ['html']);
     gulp.watch(getPath('sass'), ['style']);
-    gulp.watch(getPath('sprite','watch'), ['sprite','imagemin']);
+    gulp.watch(getPath('sprite','watch'), ['sprite','style','imagemin']);
     gulp.watch(getPath('images'), ['imagemin']);
 });
 
@@ -85,4 +85,4 @@ var tasks = require('./gulp/load');
 gulp.task('build',['clean'], function(callback) {
     return runSequence(['copy','ejs','sprite','style', 'script'], 'imagemin', callback);
 });
-gulp.task('default',['server','watch','watchScript'/*,'testWatch'*/], function() {});
+gulp.task('default',['server','watch','watchScript','testWatch'], function() {});

@@ -5,7 +5,7 @@
 var fs = require("fs");
 module.exports = {
     appPath: 'app',
-    defaultDir: 'pc',
+    defaultDir: '',
     // AutoPrefixer
     autoprefixer: {
         browser: ['last 3 version', 'ie >= 8', 'Android 4.0']
@@ -61,7 +61,11 @@ module.exports = {
         },
         // Image min
         images: {
-            src: 'source/%type%/images/**/*',
+            src: [
+                'source/%type%/images/**/*.png',
+                'source/%type%/images/**/*.jpg',
+                'source/%type%/images/**/*.gif'
+            ],
             dest: 'public/%type%/images'
         },
         test: {
@@ -76,6 +80,14 @@ module.exports = {
             {
                 from: 'source/%type%/lib/**/*',
                 to: 'public/%type%/lib'
+            },
+            {
+                from: 'source/%type%/images/**/*.svg',
+                to: 'public/%type%/images'
+            },
+            {
+                from: 'source/%type%/font/**/*',
+                to: 'public/%type%/font'
             }
         ]
     }

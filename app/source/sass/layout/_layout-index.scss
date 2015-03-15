@@ -1,0 +1,57 @@
+.layout-index {
+	display: table;
+	height: 100%;
+	margin: 0 auto;
+	@extend .clearfix;
+	.visual {
+		display: table-cell;
+		vertical-align: middle;
+	}
+	h1 {
+		font-size: ms(3);
+		font-family: $accent-font-bold;
+		letter-spacing: .2em;
+		margin: 0 8px 0 0;
+		display: inline-block;
+		small {
+			display: block;
+			letter-spacing: .1em;
+			font-size: 12px;
+		}
+	}
+	.mean {
+		display: inline-block;
+		padding: 0 72px 8px 0;
+		font-size: 10px;
+		line-height: 1.2;
+		border-bottom: 2px solid $paper-blue;
+	}
+}
+
+@media screen and (max-width: 512px) {
+	.layout-index {
+		text-align: center;
+		h1 {
+			float: none;
+			font-size: 32px;
+			text-align: center;
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 0;
+			padding: 0;
+			width: 100%;
+		}
+		.mean {
+			display: inline-block;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 12px;
+			padding: 0 24px 24px;
+			text-align: center;
+			float: none;
+			font-size: 10px;
+			line-height: 1.5;
+			border-bottom: 2px solid $paper-blue;
+		}
+	}
+}
