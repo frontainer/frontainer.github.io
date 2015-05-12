@@ -29,6 +29,7 @@ module.exports = {
         // 読み込むJSのパス
         script: '../../public/%type%/js/app.js'
     },
+    ejs: require('./app/source/data/data.js'),
     // パス設定
     path: {
         // html

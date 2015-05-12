@@ -46,67 +46,14 @@
 
         <h1>WORKS</h1>
 
-        <h2>RE:SHARIN PROJECT <small>Private Works</small></h2>
-        <p>JavaScript Library with TypeScript</p>
-        <figure><img src="./images/sharin.png" alt="RE:SHARIN PROJECT"/></figure>
-        <p>Work in Progress</p>
-        <hr>
-
-        <h2>gulp-sprite-glue <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/gulp-sprite-glue" target="_blank">https://github.com/frontainer/gulp-sprite-glue</a></p>
-        <p>glue plugin for gulp</p>
-
-        <h2>grunt-sprite-glue <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/grunt-sprite-glue" target="_blank">https://github.com/frontainer/grunt-sprite-glue</a></p>
-        <p>glue plugin for grunt</p>
-
-        <hr>
-
-        <h2>frontplate <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/frontplate" target="_blank">https://github.com/frontainer/frontplate</a></p>
-        <p>Front-end Development Enviroment</p>
-
-        <hr>
-
-        <h2>iframe-resizer <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/iframe-resizer" target="_blank">https://github.com/frontainer/iframe-resizer</a></p>
-        <p>iframe resizable cross domain</p>
-
-        <hr>
-
-        <h2>frontnote <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/frontnote" target="_blank">https://github.com/frontainer/frontnote</a></p>
-        <figure><img src="./images/frontnote.png" alt="frontnote"/></figure>
-        <p>StyleGuide generator</p>
-
-        <h2>gulp-frontnote <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/gulp-frontnote" target="_blank">https://github.com/frontainer/gulp-frontnote</a></p>
-        <p>frontnote plugin for gulp</p>
-
-        <h2>grunt-frontnote <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/grunt-frontnote" target="_blank">https://github.com/frontainer/grunt-frontnote</a></p>
-        <p>frontnote plugin for grunt</p>
-
-        <hr>
-
-        <h2>tennis-bracket <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/tennis-bracket" target="_blank">https://github.com/frontainer/tennis-bracket</a></p>
-        <p>Tennis Bracket</p>
-
-        <hr>
-
-        <h2>styleguide-template <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/styleguide-template" target="_blank">https://github.com/frontainer/styleguide-template</a></p>
-        <p>StyleGuide with AngularJS</p>
-
-        <hr>
-
-        <h2>Short.js <small>Private Works</small></h2>
-        <p><a href="https://github.com/frontainer/Short.js" target="_blank">https://github.com/frontainer/Short.js</a></p>
-        <p>Write JavaScript briefly</p>
-
-        <hr>
-        
+        <% works.forEach(function(work) {%>
+        <section>
+            <a href="" class="block-link">
+                <h2><%=work.title%> <small class="label label-default">Private Works</small></h2>
+                <p><%=work.description%></p>
+            </a>
+        </section>
+        <% }); %>
         <p>Official works is closed.</p>
     </section>
 </div>

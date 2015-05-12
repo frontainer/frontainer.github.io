@@ -46,6 +46,12 @@
 		transition-property: transform;
 		ol {
 			li {
+				opacity: 0;
+				transform: translate(10px,0);
+				transition-duration: $swing-duration;
+				transition-timing-function: $swing-out;
+				transition-property: transform, opacity;
+				transition-delay: $swing-duration;
 				a {
 					padding: 16px;
 				}
@@ -54,6 +60,10 @@
 		}
 		&.show {
 			transform: translate(0,0);
+			li {
+				transform: translate(0,0);
+				opacity: 1;
+			}
 		}
 	}
 
@@ -61,38 +71,11 @@
 		display: block;
 	}
 	.layout-content {
+		font-size: 12px;
 		padding-top: 3em;
 		padding-left: 24px;
 		.content {
 			padding: 0;
 		}
 	}
-
-
-	h1 {
-		font-size: ms(4);
-		font-family: $accent-font-bold;
-		letter-spacing: .1em;
-
-	}
-	h2 {
-		font-size: ms(3);
-		small {
-			margin-top: 1em;
-			display: block;
-		}
-	}
-	h3 {
-		font-size: ms(2);
-	}
-	h4 {
-		font-size: ms(1);
-	}
-	h5 {
-		font-size: ms(.9);
-	}
-	h6 {
-		font-size: ms(.75);
-	}
-
 }

@@ -1,5 +1,4 @@
 @import 'setting';
-@import 'base/modular-scale';
 @import 'base/mixin';
 @import 'base/normalize';
 @import 'base/base';
@@ -13,6 +12,7 @@
 @import 'module/header';
 @import 'module/navi';
 @import 'module/footer';
+@import 'module/label';
 
 @import 'layout/layout';
 @import 'layout/layout-index';

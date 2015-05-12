@@ -46,6 +46,12 @@ body {
 	//background-image: url(../images/bg.png);
 }
 
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 10px;
+	}
+}
+
 .clearfix {
 	*zoom: 1;
 	&:before, &:after {
@@ -60,39 +66,55 @@ article {
 	word-break: break-all;
 }
 h1,h2,h3,h4,h5,h6 {
-	margin: 1.414em 0 0.5em;
-	line-height: 1.2;
+	margin: #{$base-ratio}em 0 0.5em;
+	line-height: #{$base-ratio};
 	font-weight: normal;
-	word-break: break-all;
+	letter-spacing: .1em;
+	word-break: break-word;
+	small {
+		display: block;
+		font-family: $accent-font;
+	}
 }
 
 h1 {
-	font-size: ms(4);
-	font-family: $accent-font-bold;
+	font-size: #{$base-ratio*2}em;
 	letter-spacing: .1em;
-
 }
 h2 {
-	font-size: ms(3);
+	font-size: #{$base-ratio*1.414}em;
+
 }
 h3 {
-	font-size: ms(2);
+	font-size: #{$base-ratio*1.25}em;
 }
 h4 {
-	font-size: ms(1);
+	font-size: #{$base-ratio*1.125}em;
 }
 h5 {
-	font-size: ms(1);
+	font-size: #{$base-ratio*1}em;
 }
 h6 {
-	font-size: ms(1);
+	font-size: #{$base-ratio*1}em;
 }
 small {
-	font-size: ms(0)
+	font-size: $base-font-size;
 }
 a {
 	color: $paper-blue;
 	text-decoration: none;
+	word-break: break-all;
+	&:hover {
+		text-decoration: underline;
+	}
+	&.block-link {
+		display: block;
+		color: $base-font-color;
+		&:hover {
+			text-decoration: none;
+			color: $paper-blue;
+		}
+	}
 }
 img {
 	max-width: 100%;
@@ -100,4 +122,7 @@ img {
 hr {
 	border: 0;
 	border-bottom: 1px dotted #ccc;
+}
+figure {
+	margin: #{$base-ratio}em 0;
 }
