@@ -1,0 +1,56 @@
+$button-size: 21px;
+$transition: .3s;
+// increase this to see the transformations in slow-motion
+@mixin line {
+	display: inline-block;
+	width: $button-size;
+	height: $button-size/7;
+	background: #333;
+	transition: $transition;
+}
+
+.btn {
+	display: inline-block;
+	&.btn-menu {
+		padding: $button-size/2 $button-size/4;
+		transition: .3s;
+		cursor: pointer;
+		user-select: none;
+		&.is-active {
+			transition: none;
+			.lines {
+				&:before,
+				&:after {
+					top: 0;
+					width: $button-size/1.8;
+				}
+				&:before {
+					transform: rotate3d(0, 0, 1, 40deg);
+				}
+				&:after {
+					transform: rotate3d(0, 0, 1, -40deg);
+				}
+			}
+		}
+	}
+}
+
+.lines {
+	//create middle line
+	@include line;
+	position: relative;
+	/*create the upper and lower lines as pseudo-elements of the middle line*/
+	&:before, &:after {
+		@include line;
+		position: absolute;
+		left: 0;
+		content: '';
+		transform-origin: $button-size/14 center;
+	}
+	&:before {
+		top: $button-size/3;
+	}
+	&:after {
+		top: -$button-size/3;
+	}
+}

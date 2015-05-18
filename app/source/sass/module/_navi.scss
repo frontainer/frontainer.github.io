@@ -1,144 +1,25 @@
 .navi {
-	width: 100%;
-	height: 100%;
-	.navi-inner {
-		width: 100%;
-		height: 100%;
-		display: table;
+	margin: #{$base-ratio*2}em 0 #{$base-ratio}em;
+	letter-spacing: #{$base-ratio/10}em;
+	.navi-index {
+		font-weight: 300;
+		font-size: 18px;
+		margin-bottom: #{$base-ratio/2}em;
 	}
-	ol {
-		display: table-cell;
-		vertical-align: middle;
-		counter-reset: navi;
-		list-style: none;
-		padding: 0;
-		margin: 0;
-		li{
-			counter-increment: section;      /* section カウンタを増加 */
+	ul {
+		li {
 			a {
-				color: #000;
-				font-family: $accent-font-bold;
-				padding: 16px 24px;
-				margin: 8px 0;
 				display: block;
-				letter-spacing: .1em;
-				white-space: nowrap;
-				font-size: 14px;
-				&:before {
-					letter-spacing: 0;
-					font-family: $accent-font-bold;
-					width: 32px;
-					height: 32px;
-					margin-right: 1em;
-					display: inline-block;
-					text-align: center;
-					border-radius: 16px;
-					line-height: 32px;
-					content: "0" counter(section);
-				}
-				&:hover {
-					color: $paper-blue;
-					&:before {
-						background: #000;
-						color: #fff;
-					}
-				}
-				&:is-active {
-					&:before {
-						background: #000;
-						color: #fff;
-					}
-				}
+				font-size: 12px;
+				color: $base-font-color;
+				padding: #{$base-ratio/2}em 0;
+			}
+			ul {
+				margin-left: #{$base-ratio}em;
 			}
 		}
 	}
-}
-
-
-$menu-icon-size: 24px !default;
-
-.navicon {
-	display: none;
-	position: fixed;
-	top: 0;
-	left: 0;
-	padding: 19.5px 24px;
-	color: #000;
-
-	transition-duration: $swing-duration;
-	transition-timing-function: $swing-out;
-
-	> * {
-		display: block;
+	.btn-menu {
+		display: none;
 	}
-
-	&:focus {
-		outline: none; // see issue #36 https://github.com/grayghostvisuals/transformicons/issues/36
-	}
-
-	.navicon-line {
-		&::before,
-		&::after {
-			transform-origin: 50% 50%;
-			transition: top $swing-duration .6s $swing-out, transform $swing-duration $swing-out;
-		}
-	}
-
-	&.on {
-		.navicon-line {
-			background: transparent;
-
-			&::before,
-			&::after {
-				top: 0;
-				transition: top $swing-duration $swing-out, transform $swing-duration .5s $swing-out;
-				width: $menu-icon-size;
-			}
-
-			&::before {
-				transform: rotate3d(0, 0, 1, 45deg);
-			}
-
-			&::after {
-				transform: rotate3d(0, 0, 1, -45deg);
-			}
-		}
-	}
-}
-
-@mixin tcon-menu-lines {
-	display: inline-block;
-	height: 3px;
-	width: $menu-icon-size;
-	transition-duration: $swing-duration;
-	transition-timing-function: $swing-out;
-	background: #000;
-}
-
-.navicon-line {
-	@include tcon-menu-lines;
-	position: relative;
-
-	&::before,
-	&::after {
-		@include tcon-menu-lines;
-		content: '';
-		position: absolute;
-		left: 0;
-		transform-origin: ($menu-icon-size / 14) center;
-		width: 100%;
-	}
-
-	&::before {
-		top: ($menu-icon-size / 4);
-	}
-
-	&::after {
-		top: -($menu-icon-size / 4);
-	}
-
-	.on & {
-		transform: scale3d(.8, .8, .8);
-	}
-
 }

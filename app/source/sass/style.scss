@@ -1,18 +1,10 @@
 @import 'setting';
 @import 'base/mixin';
-@import 'base/normalize';
+@import 'base/sanitize';
 @import 'base/base';
 
-@import "fontawesome/variables";
-@import "fontawesome/mixins";
-@import "fontawesome/path";
-@import "fontawesome/core";
-@import "fontawesome/icons";
-
-@import 'module/header';
 @import 'module/navi';
-@import 'module/footer';
-@import 'module/label';
+@import 'module/btn';
+@import 'module/404';
 
 @import 'layout/layout';
-@import 'layout/layout-index';

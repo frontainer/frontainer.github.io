@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
     <meta property="og:locale" content="ja_JP"/>
     <meta property="fb:admins" content=""/>
-    <meta property="og:title" content=""/>
-    <meta property="og:description" content=""/>
-    <meta property="og:url" content=""/>
-    <meta property="og:site_name" content=""/>
+    <meta property="og:title" content="frontainer"/>
+    <meta property="og:description" content="フロントエンド開発を楽しむエンジニアのポートフォリオサイト"/>
+    <meta property="og:url" content="http://frontainer.com"/>
+    <meta property="og:site_name" content="frontainer"/>
     <meta property="og:type" content="blog"/>
     <meta property="og:image" content="images/common/logo_ogp.png"/>
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Libre+Baskerville" />
@@ -20,18 +20,13 @@
     <% include template/_resource%>
 </head>
 <body>
-<% include template/_header%>
-
-<div class="layout-content">
-    <div class="layout-index">
-        <section class="visual">
-            <h1><small>FRONT-END DEVELOPER</small> FRONTAINER</h1>
-            <aside class="mean">
-                <div>FRONT-END</div>
-                <div>ENTERTAINER</div>
-            </aside>
-        </section>
-    </div>
+<div class="wrap" ng-controller="RootCtrl as root">
+    <% include template/_header%>
+    <section class="layout-content" ui-view>
+        <!--<h1>INDEX</h1>-->
+        <!--<div class="underconst">COMING SOON...</div>-->
+    </section>
+    <a ui-sref="about">about</a>
 </div>
 <% include template/_script%>
 </body>

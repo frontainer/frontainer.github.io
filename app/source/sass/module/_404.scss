@@ -1,0 +1,7 @@
+.underconst {
+	font-size: $base-ratio * $base-font-size;
+	color: #666;
+	font-weight: 300;
+	letter-spacing: #{$base-ratio/10}em;
+	padding-left: 0.2em;
+}

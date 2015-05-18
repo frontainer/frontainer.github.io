@@ -1,26 +1,9 @@
 @font-face {
-	font-family: 'LinuxRegular';
-	src: url('../font/LinLibertine_R-webfont.eot');
-	src: url('../font/LinLibertine_R-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../font/LinLibertine_R-webfont.woff2') format('woff2'),
-	url('../font/LinLibertine_R-webfont.woff') format('woff'),
-	url('../font/LinLibertine_R-webfont.ttf') format('truetype'),
-	url('../font/LinLibertine_R-webfont.svg#linux_libertine_oregular') format('svg');
-	font-weight: normal;
-	font-style: normal;
-
-}
-
-@font-face {
-	font-family: 'LinuxBold';
-	src: url('../font/LinLibertine_RB-webfont.eot');
-	src: url('../font/LinLibertine_RB-webfont.eot?#iefix') format('embedded-opentype'),
-	url('../font/LinLibertine_RB-webfont.woff2') format('woff2'),
-	url('../font/LinLibertine_RB-webfont.woff') format('woff'),
-	url('../font/LinLibertine_RB-webfont.ttf') format('truetype'),
-	url('../font/LinLibertine_RB-webfont.svg#linux_libertine_obold') format('svg');
-	font-weight: normal;
-	font-style: normal;
+	font-family: 'Koruri';
+	src: url('../font/Koruri-Light.eot');
+	src: url('../font/Koruri-Light.eot?#iefix') format('embedded-opentype');
+	src: url('../font/Koruri-Light.woff') format('woff'),
+	url('../font/Koruri-Light.ttf') format('truetype');
 }
 html {
 
@@ -28,7 +11,6 @@ html {
 html,body {
 	width: 100%;
 	height: 100%;
-
 }
 body {
 	-webkit-text-size-adjust: 100%;
@@ -40,16 +22,7 @@ body {
 	font-family: $base-font-family;
 	color: $base-font-color;
 	background-color: $base-background-color;
-
-	background-size: contain;
 	@include rem();
-	//background-image: url(../images/bg.png);
-}
-
-@media screen and (max-width: 600px) {
-	body {
-		font-size: 10px;
-	}
 }
 
 .clearfix {
@@ -68,22 +41,15 @@ article {
 h1,h2,h3,h4,h5,h6 {
 	margin: #{$base-ratio}em 0 0.5em;
 	line-height: #{$base-ratio};
-	font-weight: normal;
-	letter-spacing: .1em;
-	word-break: break-word;
-	small {
-		display: block;
-		font-family: $accent-font;
-	}
+	font-weight: 300;
+	letter-spacing: #{$base-ratio/10}em;
 }
 
 h1 {
 	font-size: #{$base-ratio*2}em;
-	letter-spacing: .1em;
 }
 h2 {
-	font-size: #{$base-ratio*1.414}em;
-
+	font-size: #{$base-ratio*$base-ratio}em;
 }
 h3 {
 	font-size: #{$base-ratio*1.25}em;
